@@ -1,0 +1,327 @@
+/* ----- CABECALHO ----- */
+.cabecalho {
+  background-image: var(--cabecalho-background);
+  border-bottom-left-radius: 100px;
+  position: relative;
+  min-height: 600px;
+}
+
+.cabecalho::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/bg-pattern-intro-desktop.svg');
+  background-size: 224%;
+  background-position: 25% 53%;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav #menu-mobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav #menu-mobile #hamburguer {
+  display: block;
+  border-top: 2px solid #fff;
+  width: 32px;
+}
+
+.nav #menu-mobile #hamburguer::before, .nav #menu-mobile #hamburguer::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 5px;
+  transition: .6s;
+  position: relative;
+}
+
+.nav .menu-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav .servicos li {
+  margin-right: 10px;
+}
+
+.nav .menu-links .link {
+  padding: 20px 10px;
+}
+
+.nav .menu-links .servicos {
+  display: flex;
+  align-items: center;
+}
+
+.nav .servicos .link:hover {
+  text-decoration: underline;
+}
+
+.nav .servicos .link::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  background: url('../img/icon-arrow-light.svg');
+  margin-left: 5px;
+}
+
+.nav .servicos .link:hover::after {
+  transform: rotateX(180deg);
+}
+
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
+  display: none;
+  background: var(--cor-primaria);
+  width: 200px;
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  left: -10px;
+}
+
+.nav [data-dropdown]:hover .dropdown-menu,
+.nav [data-dropdown].active .dropdown-menu {
+  display: block;
+}
+
+.nav .dropdown-menu a {
+  display: block;
+  color: var(--cor-texto);
+  padding: 10px 0;
+  transition: 0.15s ease-in-out;
+}
+
+.nav .dropdown-menu a:hover {
+  color: hsl(0, 0%, 0%);
+  font-weight: bold;
+}
+
+.nav .links-usuario {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav .links-usuario .login {
+  padding: 20px 10px;
+}
+
+.nav .links-usuario .call {
+  padding: 15px 40px;
+}
+
+.cabecalho .call {
+  border-radius: 30px;
+  font-weight: bold;
+  background: var(--cor-primaria);
+  color: var(--cor-cabecalho-primaria);
+  transition: 0.15s ease-in-out;
+}
+
+.cabecalho .call:hover {
+  background: var(--cor-cabecalho-contraste);
+  color: var(--cor-primaria);
+}
+
+/* ----- INTRODUCAO ----- */
+.introducao {
+  margin-top: 130px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.introducao .titulo {
+  color: var(--cor-primaria);
+  font-size: 60px;
+}
+
+.introducao .descricao {
+  color: var(--cor-primaria);
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.introducao .lista-call {
+  display: flex;
+  justify-content: center;
+}
+
+.introducao .lista-call .call {
+  padding: 15px;
+  margin-right: 20px;
+}
+
+.introducao .lista-call .call-learn {
+  padding: 14px 20px;
+  border: 1px solid var(--cor-primaria);
+  border-radius: 30px;
+  transition: 0.15s ease-in-out;
+}
+
+.introducao .lista-call .call-learn:hover {
+  background: var(--cor-primaria);
+  color: var(--cor-cabecalho-contraste);
+}
+
+/* ----- PROJETO ----- */
+.projeto,
+.detalhes {
+  margin-top: 120px;
+  margin-bottom: 220px;
+  background-repeat: no-repeat;
+}
+
+.projeto {
+  background-image: url('../img/illustration-editor-desktop.svg');
+  background-position: 130% center;
+  background-size: 50%;
+  min-height: 700px;
+}
+
+.projeto .titulo {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 130px;
+}
+
+.divisor-conteudo {
+  display: flex;
+}
+.divisor-conteudo .info-dupla {
+  max-width: 565px;
+}
+
+.divisor-conteudo .info-dupla > div:first-child {
+  margin-bottom: 60px;
+}
+
+.divisor-conteudo .info-dupla .subtitulo {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.divisor-conteudo .info-dupla .conteudo {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+/* ----- INFRAESTRUTURA ----- */
+.infraestrutura {
+  background: url('../img/bg-pattern-circles.svg') -63% 82% / 75% no-repeat,
+    var(--meio-background);
+  position: relative;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.infraestrutura .divisor-conteudo {
+  justify-content: flex-end;
+  position: relative;
+}
+
+.infraestrutura .divisor-conteudo::before {
+  content: '';
+  background: url('../img/illustration-phones.svg') no-repeat;
+  width: 552px;
+  height: 579px;
+  position: absolute;
+  top: -70px;
+  left: 0;
+}
+
+.infraestrutura .info-unica {
+  max-width: 500px;
+  padding: 125px 0;
+}
+
+.infraestrutura .info-unica .subtitulo {
+  color: var(--cor-primaria);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.infraestrutura .info-unica .conteudo {
+  color: var(--cor-texto-opaco);
+  grid-column: 2;
+}
+
+/* ----- DETALHES ----- */
+.detalhes {
+  background-image: url('../img/illustration-laptop-desktop.svg');
+  background-position: -43% 40%;
+  background-size: 60%;
+  min-height: 800px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px;
+}
+
+.detalhes .divisor-conteudo {
+  flex-direction: row-reverse;
+}
+
+/* ----- RODAPÉ ----- */
+.rodape {
+  background: var(--rodape-background);
+  border-top-right-radius: 100px;
+  font-family: var(--fonte-secundaria);
+}
+
+.rodape .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 0;
+}
+
+.rodape .rodape-links p {
+  color: var(--cor-primaria);
+  font-weight: 500;
+}
+
+.rodape .rodape-links .conheca-mais {
+  margin-top: 30px;
+}
+
+.rodape .conheca-mais a {
+  display: inline-block;
+  padding: 10px 0;
+  margin-bottom: 2px;
+  color: var(--cor-texto-opaco);
+  font-weight: 400;
+}
+
+.rodape .conheca-mais a:hover {
+  text-decoration: underline;
+}
